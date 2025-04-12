@@ -1,0 +1,2620 @@
+{
+	"info": {
+		"_postman_id": "c79642da-e542-4bc5-9539-ecdc8b5658dc",
+		"name": "Enjaz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42360708",
+		"_collection_link": "https://enjaz7.postman.co/workspace/EnjazApp~30ff62db-abeb-4749-aaab-5d93e05d978e/collection/42360708-c79642da-e542-4bc5-9539-ecdc8b5658dc?action=share&source=collection_link&creator=42360708"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/health"
+			},
+			"response": [
+				{
+					"name": "healthy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/health"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 11:17:55 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"36-7ZCmpOLRUGRAs8QrygCbbhJVcIY\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-03-23T11:17:55.143Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Normal Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Bassel\",\r\n  \"lastname\": \"Sallam\",\r\n  \"phone\": \"01100725449\",\r\n  \"countrycode\": \"+20\",\r\n  \"email\": \"BasselA.Sallam@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/signup"
+			},
+			"response": [
+				{
+					"name": "Taken account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstname\": \"Bassel\",\r\n  \"lastname\": \"Sallam\",\r\n  \"phone\": \"01100725449\",\r\n  \"countrycode\": \"+20\",\r\n  \"email\": \"BasselA.Sallam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/signup"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 11:31:33 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2b-HEpbSiSpd++z+phxLJPn8BwnN8Y\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Email or phone is already taken\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstname\": \"Bassel\",\r\n  \"lastname\": \"Sallam\",\r\n  \"phone\": \"01100725449\",\r\n  \"countrycode\": \"+20\",\r\n  \"email\": \"BasselA.Salam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/signup"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 11:33:49 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"58-9/5oYt/EB5hsmY0hVrUWX1qcUy4\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User is created successfully\",\n    \"user\": \"882f311e-0e08-4968-8ff7-fcf96352cc3f\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Normal login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"method\" : \"EMAIL\" ,\r\n    \"id\" : \"BasselA.Salam@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/login-account"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\" : \"EMAIL\" ,\r\n    \"id\" : \"BasselA.Salam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/login-account"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 21:49:47 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"63-1uSqnlE3En7o7aIUkbawedlws7I\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login code has been sent successfully\",\n    \"userId\": \"6abd1b36-1dd1-4609-a164-de89bc5af01d\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verfity normal login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\" : \"5285\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/login-account/{{userId}}/code"
+			},
+			"response": [
+				{
+					"name": "expired code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\" : \"5285\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/login-account/{{userId}}/code"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 21:55:51 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1b-Zl9xtOIYuThv61WWsNXl16lS60Y\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Code is expired\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\" : \"7851\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/login-account/{{userId}}/code"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "312"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 21:56:33 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"138-LMQPQSXbqKCkd8+nzGNcqmq1dTk\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWJkMWIzNi0xZGQxLTQ2MDktYTE2NC1kZTg5YmM1YWYwMWQiLCJ1c2VybmFtZSI6IkJhc3NlbCBTYWxsYW0iLCJlbWFpbCI6ImJhc3NlbGEuc2FsYW1AZ21haWwuY29tIiwidmVyZmllZCI6dHJ1ZSwiaWF0IjoxNzQyNzY2OTkzfQ.-LuSsU2AombLwf1YUm91fNe_VmXtfIDEn9Z8h3N1PAc; Path=/; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWJkMWIzNi0xZGQxLTQ2MDktYTE2NC1kZTg5YmM1YWYwMWQiLCJ1c2VybmFtZSI6IkJhc3NlbCBTYWxsYW0iLCJlbWFpbCI6ImJhc3NlbGEuc2FsYW1AZ21haWwuY29tIiwidmVyZmllZCI6dHJ1ZSwiaWF0IjoxNzQyNzY2OTkzfQ.-LuSsU2AombLwf1YUm91fNe_VmXtfIDEn9Z8h3N1PAc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verify user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : \"01100725449\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/user/{{userId}}/verify"
+			},
+			"response": [
+				{
+					"name": "user not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"01100725449\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/user/{{userId}}/verify"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:04:06 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1a-hq/hT0ORGTkTfyRpVCZ/JB/r8Eg\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"User not found\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"01100725449\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/user/{{userId}}/verify"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:04:42 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2b-xlMR5APHagaRJqTSX8MEIL3jhJQ\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User is verified successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"5th settlement 90\" ,\r\n    \"location\" : \"String of location\" // optional\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"5th settlement 90\" ,\r\n    \"location\" : \"String of location\" // optional\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "217"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:14:59 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"d9-u4haYl7Q41ynlAsP4InyNqcFvhc\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Address added successfully\",\n    \"data\": {\n        \"id\": \"4fe2d509-b26c-40e4-b15f-9becd5831a13\",\n        \"name\": \"Home\",\n        \"address\": \"5th settlement 90\",\n        \"location\": \"String of location\",\n        \"userid\": \"6abd1b36-1dd1-4609-a164-de89bc5af01d\"\n    }\n}"
+				},
+				{
+					"name": "dublicated name",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"5th settlement 90\" ,\r\n    \"location\" : \"String of location\" // optional\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:15:25 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"23-K7UefOrmcl325kd15wu/5D9hIkA\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Name is already taken\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Addresses",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/address/{{userId}}"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/address/{{userId}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "245"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f5-++oAgLmpPPlPzHq6iCaiqEzwx88\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:56:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"addresses\": [\n        {\n            \"address\": \"smart village\",\n            \"name\": \"Work\",\n            \"location\": \"optional\",\n            \"id\": \"4fe2d509-b26c-40e4-b15f-9becd5831a13\"\n        },\n        {\n            \"address\": \"5th settlement 90\",\n            \"name\": \"Home\",\n            \"location\": \"String of location\",\n            \"id\": \"53bd74d4-8b4d-4024-befe-239032b7e301\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "edit Address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address/{{addressId}}"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Work\" , \r\n    \"address\" : \"smart village\" ,\r\n    \"location\" : \"optional\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address/{{addressId}}"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:19:37 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2a-hSRwV59ynpt7WYd4DtDYDpw+Sro\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Address updated successfully\"\n}"
+				},
+				{
+					"name": "dublicated name",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"smart village\" ,\r\n    \"location\" : \"optional\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address/{{addressId}}"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:22:45 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"23-K7UefOrmcl325kd15wu/5D9hIkA\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Name is already taken\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New Orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fileLanguge",
+							"value": "Arabic",
+							"type": "text"
+						},
+						{
+							"key": "translationLanguges",
+							"value": "English",
+							"type": "text"
+						},
+						{
+							"key": "translationLanguges",
+							"value": "Deutch",
+							"type": "text"
+						},
+						{
+							"key": "translationLanguges",
+							"value": "French",
+							"type": "text"
+						},
+						{
+							"key": "methodOfDelivery",
+							"value": "NO",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "optional",
+							"type": "text"
+						},
+						{
+							"key": "Address",
+							"value": "optional",
+							"type": "text"
+						},
+						{
+							"key": "otherDocs",
+							"type": "file",
+							"src": [
+								"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (2).pdf",
+								"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (1).pdf"
+							]
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/order/translation"
+			},
+			"response": [
+				{
+					"name": "Home Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileLanguge",
+									"value": "Arabic",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "English",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "Dutch",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "French",
+									"type": "text"
+								},
+								{
+									"key": "methodOfDelivery",
+									"value": "Home",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "optional",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "optional",
+									"type": "text"
+								},
+								{
+									"key": "otherDocs",
+									"type": "file",
+									"src": [
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (2).pdf",
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (1).pdf"
+									]
+								}
+							]
+						},
+						"url": "http://localhost:3000/api/order/translation"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-Hb96EjuSfWeIkUp7cPwAQEyntWo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:27:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order uploaded successfully!\"\n}"
+				},
+				{
+					"name": "Office",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileLanguge",
+									"value": "Arabic",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "English",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "Dutch",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "French",
+									"type": "text"
+								},
+								{
+									"key": "methodOfDelivery",
+									"value": "Office",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "optional",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "optional",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "otherDocs",
+									"type": "file",
+									"src": [
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (2).pdf",
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (1).pdf",
+										"/C:/Users/BasselSallam/Downloads/ChatGPT Image Apr 4, 2025, 05_27_44 AM-Photoroom.jpg"
+									]
+								}
+							]
+						},
+						"url": "http://localhost:3000/api/order/translation"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-Hb96EjuSfWeIkUp7cPwAQEyntWo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:24:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order uploaded successfully!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "my orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/order/{{userId}}?type=translation&status=new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order",
+						"{{userId}}"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "translation"
+						},
+						{
+							"key": "status",
+							"value": "new"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "new",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/order/{{userId}}?type=translation&status=new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "translation"
+								},
+								{
+									"key": "status",
+									"value": "new"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "265"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"109-y2baylwG7uvAU0wA7d3s95BpyUg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:44:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"number\": 1,\n        \"createdAt\": \"04/04/2025 06:24 AM\",\n        \"delivery\": \"Office\",\n        \"translationfrom\": \"Arabic\",\n        \"filescount\": 1,\n        \"status\": \"Under Review\"\n    },\n    {\n        \"number\": 2,\n        \"createdAt\": \"04/04/2025 06:27 AM\",\n        \"delivery\": \"Home\",\n        \"translationfrom\": \"Arabic\",\n        \"filescount\": 2,\n        \"status\": \"Under Review\"\n    }\n]"
+				},
+				{
+					"name": "current",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/order/{{userId}}?type=translation&status=current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "translation"
+								},
+								{
+									"key": "status",
+									"value": "current"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:45:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "finished",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/order/{{userId}}?type=translation&status=finished",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "translation"
+								},
+								{
+									"key": "status",
+									"value": "finished"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:46:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "cancelled",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/order/{{userId}}?type=translation&status=cancelled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "translation"
+								},
+								{
+									"key": "status",
+									"value": "cancelled"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:46:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "printing order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/order/{{userId}}?type=printing&status=cancelled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "printing"
+								},
+								{
+									"key": "status",
+									"value": "cancelled"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 04:46:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "orderDetails",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/order/{{orderId}}"
+			},
+			"response": [
+				{
+					"name": "Home",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/order/{{orderId}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "425"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a9-Gu+tD3sSPxSsaNJlUBS6JsVbRSg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 06:15:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"number\": 3,\n    \"data\": \"04/04/2025\",\n    \"time\": \"08:05 AM\",\n    \"status\": \"Under Review\",\n    \"delivery\": {\n        \"address\": \"optional\",\n        \"type\": \"Home\"\n    },\n    \"translationfrom\": \"Arabic\",\n    \"translationto\": [\n        {\n            \"name\": \"Dutch\",\n            \"Arabicname\": \"الهولندية\",\n            \"cost\": 100\n        },\n        {\n            \"name\": \"English\",\n            \"Arabicname\": \"الإنجليزية\",\n            \"cost\": 100\n        },\n        {\n            \"name\": \"French\",\n            \"Arabicname\": \"الفرنسية\",\n            \"cost\": 100\n        }\n    ],\n    \"notes\": \"optional\",\n    \"files\": [\n        \"1743746739003.pdf\",\n        \"1743746739005.pdf\"\n    ]\n}"
+				},
+				{
+					"name": "Office",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/order/{{orderId}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "456"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c8-/dZ0JU4I+h7WO7kPDJY1W4IHRQo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 06:16:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"number\": 4,\n    \"data\": \"04/04/2025\",\n    \"time\": \"08:05 AM\",\n    \"status\": \"Under Review\",\n    \"delivery\": {\n        \"address\": \"الرياض شارع الدمام 25\",\n        \"type\": \"Office\"\n    },\n    \"translationfrom\": \"Arabic\",\n    \"translationto\": [\n        {\n            \"name\": \"Dutch\",\n            \"Arabicname\": \"الهولندية\",\n            \"cost\": 100\n        },\n        {\n            \"name\": \"English\",\n            \"Arabicname\": \"الإنجليزية\",\n            \"cost\": 100\n        },\n        {\n            \"name\": \"French\",\n            \"Arabicname\": \"الفرنسية\",\n            \"cost\": 100\n        }\n    ],\n    \"notes\": \"optional\",\n    \"files\": [\n        \"1743746743851.pdf\",\n        \"1743746743851.pdf\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "cancell order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/order/{{orderId}}"
+			},
+			"response": [
+				{
+					"name": "no reason",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/order/{{orderId}}"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-GtH4/c/f/KAreyvord9mvLudF4M\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 06:48:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Reason is required\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reason\" : \"expinsive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/order/{{orderId}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-Gg9VOzXKAUaEHsblFbcEbDjjkcs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 06:51:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order cancelled successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "rate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stars\" : 5 ,\r\n    \"comment\" : \"Good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/order/{{orderId}}/rate"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stars\" : 5 ,\r\n    \"comment\" : \"Good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/order/{{orderId}}/rate"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-TWcBRsQLY96I3QyrvTuVEf2ptrs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 06:58:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order is rated successfully\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stars\" : 5 ,\r\n    \"comment\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/order/{{orderId}}/rate"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-TWcBRsQLY96I3QyrvTuVEf2ptrs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 06:59:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order is rated successfully\"\n}"
+				},
+				{
+					"name": "invalid stars",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stars\" : 6 ,\r\n    \"comment\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/order/{{orderId}}/rate"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-/+vS1fmKTVZGCIOqHpuY42QpyZ8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 06:59:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Stars must be between 1 and 5\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get user name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/user/{{user_id}}"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/user/{{user_id}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-RxShO36PwHakBnLOAbH6AzsZm58\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 07:50:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"firstname\": \"Bassel\",\n    \"lastname\": \"Sallam\"\n}"
+				},
+				{
+					"name": "not the same user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/user/{{user_id}}"
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17-bqIm6pxC4cx+ZoszvXxsClwgWw8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 07:50:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Forbidden\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update phone number",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : \"011007254490\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/user/{{user_id}}/changephone"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"011007254490\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_id}}/changephone"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-d749iPsr49Tkojyu/WYhTROS7Nk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 07:56:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Phone number updated successfully\"\n}"
+				},
+				{
+					"name": "invalid input",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"011007254490\" \r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_id}}/changephone"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-qRKE5Z0vNSmJNk4XGP8kouT5rcA\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 07:57:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Phone number and country code are required\"\n}"
+				}
+			]
+		},
+		{
+			"name": "change email request",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"bassela.salam@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/user/{{user_id}}/chgnageemail/request"
+			},
+			"response": [
+				{
+					"name": "email exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"bassela.salam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_id}}/chgnageemail/request"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-0vInFX57D0463enA/zkOEgxNZXU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 08:19:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Email already exists\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"newemail@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_id}}/chgnageemail/request"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-pInT9J5fgrRP1ctEDln43ADF/zg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 08:27:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Email change code sent successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Enter change Email code",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\" : \"7009\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/user/{{user_Id}}/chgnageemail/code"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\" : \"7009\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_Id}}/chgnageemail/code"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-8muF9vu+TDEz+rSfoWD0oRipmx4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 08:29:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Email change code verified successfully\"\n}"
+				},
+				{
+					"name": "invalid code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\" : \"4544\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_Id}}/chgnageemail/code"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-3xLZE1XhBrTid7jMcA4KLKzdcEk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 08:30:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid email change code\"\n}"
+				}
+			]
+		},
+		{
+			"name": "change email",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"bassela.salam@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/user/{{user_Id}}/chgnageemail"
+			},
+			"response": [
+				{
+					"name": "email exits",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bassela.salam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_Id}}/chgnageemail"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-0vInFX57D0463enA/zkOEgxNZXU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 08:33:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Email already exists\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"newemail@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/user/{{user_Id}}/chgnageemail"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-gYFcsVNuW4Wa46okTggVHFElszg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Apr 2025 08:33:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Email changed successfully\"\n}"
+				}
+			]
+		}
+	]
+}

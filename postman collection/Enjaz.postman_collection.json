@@ -1,0 +1,1179 @@
+{
+	"info": {
+		"_postman_id": "c79642da-e542-4bc5-9539-ecdc8b5658dc",
+		"name": "Enjaz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42360708",
+		"_collection_link": "https://enjaz7.postman.co/workspace/EnjazApp~30ff62db-abeb-4749-aaab-5d93e05d978e/collection/42360708-c79642da-e542-4bc5-9539-ecdc8b5658dc?action=share&source=collection_link&creator=42360708"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/health"
+			},
+			"response": [
+				{
+					"name": "healthy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/health"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 11:17:55 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"36-7ZCmpOLRUGRAs8QrygCbbhJVcIY\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"timestamp\": \"2025-03-23T11:17:55.143Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Normal Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Bassel\",\r\n  \"lastname\": \"Sallam\",\r\n  \"phone\": \"01100725449\",\r\n  \"countrycode\": \"+20\",\r\n  \"email\": \"BasselA.Sallam@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/signup"
+			},
+			"response": [
+				{
+					"name": "Taken account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstname\": \"Bassel\",\r\n  \"lastname\": \"Sallam\",\r\n  \"phone\": \"01100725449\",\r\n  \"countrycode\": \"+20\",\r\n  \"email\": \"BasselA.Sallam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/signup"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 11:31:33 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2b-HEpbSiSpd++z+phxLJPn8BwnN8Y\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Email or phone is already taken\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstname\": \"Bassel\",\r\n  \"lastname\": \"Sallam\",\r\n  \"phone\": \"01100725449\",\r\n  \"countrycode\": \"+20\",\r\n  \"email\": \"BasselA.Salam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/signup"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 11:33:49 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"58-9/5oYt/EB5hsmY0hVrUWX1qcUy4\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User is created successfully\",\n    \"user\": \"882f311e-0e08-4968-8ff7-fcf96352cc3f\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Normal login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"method\" : \"EMAIL\" ,\r\n    \"id\" : \"BasselA.Salam@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://7dec9892-cd35-44ca-9a50-da4d56ad5275-00-13g6wv7p44kft.janeway.replit.dev/api/login-account"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\" : \"EMAIL\" ,\r\n    \"id\" : \"BasselA.Salam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/login-account"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 21:49:47 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"63-1uSqnlE3En7o7aIUkbawedlws7I\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login code has been sent successfully\",\n    \"userId\": \"6abd1b36-1dd1-4609-a164-de89bc5af01d\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verfity normal login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\" : \"5285\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/login-account/{{userId}}/code"
+			},
+			"response": [
+				{
+					"name": "expired code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\" : \"5285\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/login-account/{{userId}}/code"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 21:55:51 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1b-Zl9xtOIYuThv61WWsNXl16lS60Y\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Code is expired\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\" : \"7851\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/login-account/{{userId}}/code"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "312"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 21:56:33 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"138-LMQPQSXbqKCkd8+nzGNcqmq1dTk\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWJkMWIzNi0xZGQxLTQ2MDktYTE2NC1kZTg5YmM1YWYwMWQiLCJ1c2VybmFtZSI6IkJhc3NlbCBTYWxsYW0iLCJlbWFpbCI6ImJhc3NlbGEuc2FsYW1AZ21haWwuY29tIiwidmVyZmllZCI6dHJ1ZSwiaWF0IjoxNzQyNzY2OTkzfQ.-LuSsU2AombLwf1YUm91fNe_VmXtfIDEn9Z8h3N1PAc; Path=/; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWJkMWIzNi0xZGQxLTQ2MDktYTE2NC1kZTg5YmM1YWYwMWQiLCJ1c2VybmFtZSI6IkJhc3NlbCBTYWxsYW0iLCJlbWFpbCI6ImJhc3NlbGEuc2FsYW1AZ21haWwuY29tIiwidmVyZmllZCI6dHJ1ZSwiaWF0IjoxNzQyNzY2OTkzfQ.-LuSsU2AombLwf1YUm91fNe_VmXtfIDEn9Z8h3N1PAc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verify user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : \"01100725449\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/user/{{userId}}/verify"
+			},
+			"response": [
+				{
+					"name": "user not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"01100725449\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/user/{{userId}}/verify"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:04:06 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1a-hq/hT0ORGTkTfyRpVCZ/JB/r8Eg\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"User not found\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : \"01100725449\" ,\r\n    \"countrycode\" : \"+20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/user/{{userId}}/verify"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:04:42 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2b-xlMR5APHagaRJqTSX8MEIL3jhJQ\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User is verified successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"5th settlement 90\" ,\r\n    \"location\" : \"String of location\" // optional\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"5th settlement 90\" ,\r\n    \"location\" : \"String of location\" // optional\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "217"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:14:59 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"d9-u4haYl7Q41ynlAsP4InyNqcFvhc\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Address added successfully\",\n    \"data\": {\n        \"id\": \"4fe2d509-b26c-40e4-b15f-9becd5831a13\",\n        \"name\": \"Home\",\n        \"address\": \"5th settlement 90\",\n        \"location\": \"String of location\",\n        \"userid\": \"6abd1b36-1dd1-4609-a164-de89bc5af01d\"\n    }\n}"
+				},
+				{
+					"name": "dublicated name",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"5th settlement 90\" ,\r\n    \"location\" : \"String of location\" // optional\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:15:25 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"23-K7UefOrmcl325kd15wu/5D9hIkA\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Name is already taken\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Addresses",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:16:45 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"89-7SXJ2loQpw7dQB8oIM/vP2yAcQU\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"addresses\": [\n        {\n            \"address\": \"5th settlement 90\",\n            \"name\": \"Home\",\n            \"location\": \"String of location\",\n            \"id\": \"4fe2d509-b26c-40e4-b15f-9becd5831a13\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "edit Address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address/{{addressId}}"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Work\" , \r\n    \"address\" : \"smart village\" ,\r\n    \"location\" : \"optional\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address/{{addressId}}"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:19:37 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2a-hSRwV59ynpt7WYd4DtDYDpw+Sro\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Address updated successfully\"\n}"
+				},
+				{
+					"name": "dublicated name",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Home\" , \r\n    \"address\" : \"smart village\" ,\r\n    \"location\" : \"optional\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/address/{{addressId}}"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:22:45 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"23-K7UefOrmcl325kd15wu/5D9hIkA\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Name is already taken\"\n}"
+				}
+			]
+		},
+		{
+			"name": "New Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fileLanguge",
+							"value": "Arabic",
+							"type": "text"
+						},
+						{
+							"key": "translationLanguges",
+							"value": "English",
+							"type": "text"
+						},
+						{
+							"key": "translationLanguges",
+							"value": "Deutch",
+							"type": "text"
+						},
+						{
+							"key": "translationLanguges",
+							"value": "French",
+							"type": "text"
+						},
+						{
+							"key": "methodOfDelivery",
+							"value": "HOME",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "optional",
+							"type": "text"
+						},
+						{
+							"key": "Address",
+							"value": "optional",
+							"type": "text"
+						},
+						{
+							"key": "otherDocs",
+							"type": "file",
+							"src": [
+								"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (2).pdf",
+								"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (1).pdf"
+							]
+						}
+					]
+				},
+				"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/order/translation"
+			},
+			"response": [
+				{
+					"name": "Home Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileLanguge",
+									"value": "Arabic",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "English",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "Deutch",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "French",
+									"type": "text"
+								},
+								{
+									"key": "methodOfDelivery",
+									"value": "HOME",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "optional",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "optional",
+									"type": "text"
+								},
+								{
+									"key": "otherDocs",
+									"type": "file",
+									"src": [
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (2).pdf",
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (1).pdf"
+									]
+								}
+							]
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/order/translation"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:34:56 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2a-Hb96EjuSfWeIkUp7cPwAQEyntWo\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order uploaded successfully!\"\n}"
+				},
+				{
+					"name": "NO HOME",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileLanguge",
+									"value": "Arabic",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "English",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "Deutch",
+									"type": "text"
+								},
+								{
+									"key": "translationLanguges",
+									"value": "French",
+									"type": "text"
+								},
+								{
+									"key": "methodOfDelivery",
+									"value": "NO",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "optional",
+									"type": "text"
+								},
+								{
+									"key": "Address",
+									"value": "optional",
+									"type": "text"
+								},
+								{
+									"key": "otherDocs",
+									"type": "file",
+									"src": [
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (2).pdf",
+										"/C:/Users/BasselSallam/Downloads/7761_SUPPLIER (1).pdf"
+									]
+								}
+							]
+						},
+						"url": "https://b762efea-73b1-4221-8420-90b4e7d17125-00-2mjbzkqtyqqef.janeway.replit.dev/api/order/translation"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Mar 2025 22:36:26 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2a-Hb96EjuSfWeIkUp7cPwAQEyntWo\""
+						},
+						{
+							"key": "Replit-Cluster",
+							"value": "janeway"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "none, noindex, noarchive, nofollow, nositelinkssearchbox, noimageindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order uploaded successfully!\"\n}"
+				}
+			]
+		}
+	]
+}

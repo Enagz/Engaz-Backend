@@ -1,0 +1,134 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id         String     @id @default(uuid())
+  email      String     @unique
+  name       String    
+  phone      String?    @unique
+  countrycode String?
+  password   String?
+  AuthID     String?    @unique
+  createdAt  DateTime   @default(now())
+  Isactive   Boolean    @default(true)
+
+  resetCode  String?
+  resetexpire DateTime?
+
+  loginCode  String?
+  loginexpire DateTime?
+
+   chabgeemailCode  String?
+   changeemailexpire DateTime?
+
+  resetpermession Boolean @default(false)
+  changeemailpermession Boolean @default(false)
+
+
+
+  orders            Orders[]
+  addresses         Address[]
+}
+
+model Orders {
+  number     Int         @id @default(autoincrement())
+  userid     String
+  type       String 
+  delivery   String 
+  paymentStatus String 
+  status        String
+  files         Json? 
+  address       String?
+  user       User     @relation(fields:[userid] , references:[id])
+  notes      String?
+  translationfrom String?
+  translationto Json?
+  cancelationreason String?
+  rate Int?
+  comment String?
+  cost  Int?
+  PrintingDetails   PrintingDetails[] 
+  
+
+
+  receiveDate   DateTime?
+  operationDate DateTime?
+  deleviryDate  DateTime?
+  finishDate    DateTime?
+
+  createdAt  DateTime   @default(now())
+}
+
+model Address {
+  id         String     @id @default(uuid())
+  name       String     @unique
+  address    String 
+  location   String?    
+  userid     String
+  user       User     @relation(fields:[userid] , references:[id])
+}
+
+model Languge {
+  id            String     @id @default(uuid())
+  name          String     @unique
+  Arabicname    String     @unique
+  cost          Int
+
+}
+
+model OfficeAddress {
+  id          Int    @id @default(autoincrement())
+  address     String
+}
+
+model Tax {
+  id          Int    @id @default(autoincrement())
+  tax Int 
+}
+
+model Socialmedia {
+  id          Int    @id @default(autoincrement())
+  facebook String?
+  linkedin String?
+  instegram String?
+  youtube String?
+  tiktok String?
+  whatsapp String?
+
+}
+
+model PrintingCollors {
+    id         String     @id @default(uuid())
+    color      String   @unique
+    ArabicColor  String @unique
+    cost Int 
+}
+
+model PrintingCovers {
+
+     id         String     @id @default(uuid())
+    name        String  @unique
+    arabicname  String @unique
+    cost Int
+
+}
+
+model PrintingDetails {
+  id         String     @id @default(uuid())
+  color      String
+  cover      String
+  copies     Int
+  pages      Int
+  file       String
+
+  orderId   Int
+  Orders    Orders    @relation(fields:[orderId] , references:[number])
+}
