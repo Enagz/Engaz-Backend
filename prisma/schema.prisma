@@ -132,3 +132,14 @@ model PrintingDetails {
   orderId   Int
   Orders    Orders    @relation(fields:[orderId] , references:[number])
 }
+
+model Terms {
+  id         String     @id @default(uuid())
+  EnglishPrivacy  String  @db.Text 
+  ArabicPrivacy String  @db.Text 
+  EnglishTerms String  @db.Text 
+  ArabicTerms String  @db.Text 
+  EnglishUsage String  @db.Text 
+  ArabicUsage String  @db.Text 
+
+}

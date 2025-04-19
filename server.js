@@ -1,50 +1,42 @@
-
-import express from "express"
-import pkg from 'express-openid-connect';
-import path from "path"
-import { fileURLToPath } from 'url';
+import express from "express";
+import pkg from "express-openid-connect";
+import path from "path";
+import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 dotenv.config();
 const prisma = new PrismaClient();
-import cors from "cors"
+import cors from "cors";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
-import http from "http"; 
+import http from "http";
 import { initializeSocket } from "./socket/socket.js";
-
 
 const PORT = process.env.PORT || 3000;
 
-const app = express() ;
-const server = http.createServer(app); 
+const app = express();
+const server = http.createServer(app);
 
 initializeSocket(server);
 
-
 app.use(cors());
-app.use(express.static("public")) ;
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-
-import AuthRouter from "./Routes/AuthRouter.js"
+import AuthRouter from "./Routes/AuthRouter.js";
 import ErrorHandler from "./middleware/ErrorHandler.js";
-import OrdersRouter from "./Routes/OrdersRouter.js"
-import AddressRouter from "./Routes/AddressRouter.js"
-import LanguageRouter from "./Routes/langugeRouter.js"
-import UserRouter from "./Routes/UserRouter.js"
-
-
-
+import OrdersRouter from "./Routes/OrdersRouter.js";
+import AddressRouter from "./Routes/AddressRouter.js";
+import LanguageRouter from "./Routes/langugeRouter.js";
+import UserRouter from "./Routes/UserRouter.js";
+import ConditionsRouter from "./dashboard/Routes/termsRouter.js";
 
 // const config = {
 //   authRequired: false,
@@ -78,37 +70,28 @@ import UserRouter from "./Routes/UserRouter.js"
 //   });
 // })() ;
 
-(async () => {
-  
-})();
-
-
+(async () => {})();
 
 // app.use(auth(config));
-app.use('/api' , AuthRouter ) ;
-app.use('/api' , OrdersRouter) ;
-app.use('/api' , AddressRouter) ;
-app.use('/api' , LanguageRouter) ;
-app.use('/api' , UserRouter) ;
+app.use("/api", AuthRouter);
+app.use("/api", OrdersRouter);
+app.use("/api", AddressRouter);
+app.use("/api", LanguageRouter);
+app.use("/api", UserRouter);
+app.use("/api/dashboard", ConditionsRouter);
 
-
-
-app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ status: "OK", timestamp: new Date().toISOString() });
 });
 
-
-
-app.use('/' , (req , res , next) => {
+app.use("/", (req, res, next) => {
   res.status(404).send("Page not found");
-})
+});
 
-app.use(ErrorHandler) ;
+app.use(ErrorHandler);
 
 
 
-  
-
-server.listen(PORT, '0.0.0.0' , () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
