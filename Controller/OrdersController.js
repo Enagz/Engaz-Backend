@@ -14,7 +14,7 @@ import {
 
 export const newTranslationOrder = async (req, res, next) => {
   try {
-    const {
+    let {
       fileLanguge,
       translationLanguges,
       methodOfDelivery,
@@ -24,12 +24,15 @@ export const newTranslationOrder = async (req, res, next) => {
     const files = req.files;
     let filename;
     const { userId } = req.user;
+    console.log(req.body);
+    console.log("hh" , files);
 
     if (!fileLanguge || !translationLanguges || !methodOfDelivery || !files) {
       return res.status(400).json({
         message: "All inputs are required",
       });
     }
+    translationLanguges = JSON.parse(translationLanguges);
 
     if (methodOfDelivery !== "Home" && methodOfDelivery !== "Office") {
       return res.status(400).json({
