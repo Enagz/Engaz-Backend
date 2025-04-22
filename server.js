@@ -37,6 +37,8 @@ import AddressRouter from "./Routes/AddressRouter.js";
 import LanguageRouter from "./Routes/langugeRouter.js";
 import UserRouter from "./Routes/UserRouter.js";
 import ConditionsRouter from "./dashboard/Routes/termsRouter.js";
+import DashboardAuthRouter from "./dashboard/Routes/AuthRouter.js";
+import clinetsRouter from "./dashboard/Routes/clientsRouter.js";
 
 // const config = {
 //   authRequired: false,
@@ -79,6 +81,8 @@ app.use("/api", AddressRouter);
 app.use("/api", LanguageRouter);
 app.use("/api", UserRouter);
 app.use("/api/dashboard", ConditionsRouter);
+app.use("/api/dashboard", DashboardAuthRouter);
+app.use("/api/dashboard", clinetsRouter);
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "OK", timestamp: new Date().toISOString() });
@@ -90,6 +94,9 @@ app.use("/", (req, res, next) => {
 
 app.use(ErrorHandler);
 
+
+    
+     
 
 
 server.listen(PORT, "0.0.0.0", () => {

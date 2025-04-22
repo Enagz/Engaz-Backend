@@ -32,6 +32,12 @@ model User {
   resetpermession Boolean @default(false)
   changeemailpermession Boolean @default(false)
 
+  ordersCounter Int @default(0)
+  rateAvg  Int @default(0)
+  totalRevenue Int @default(0)
+  lastOrder  DateTime?
+  
+
 
 
   orders            Orders[]
@@ -142,4 +148,14 @@ model Terms {
   EnglishUsage String  @db.Text 
   ArabicUsage String  @db.Text 
 
+}
+
+model Employee {
+   id         String     @id @default(uuid())
+   email      String     @unique
+   phone      String     @unique
+   name       String
+   password   String
+   title      String
+   isDeleted  Boolean @default(false)
 }

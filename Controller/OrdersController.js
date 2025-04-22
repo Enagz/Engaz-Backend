@@ -83,6 +83,10 @@ export const newTranslationOrder = async (req, res, next) => {
       },
     });
 
+    const user = await prisma.user.update({where: { id: userId } , data : {ordersCounter: {increment : 1}}});
+
+    
+
     res.status(201).json({
       message: "Order uploaded successfully!",
     });
