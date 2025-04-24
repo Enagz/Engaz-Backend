@@ -18,7 +18,7 @@ model User {
   password   String?
   AuthID     String?    @unique
   createdAt  DateTime   @default(now())
-  Isactive   Boolean    @default(true)
+  isDeleted   Boolean    @default(false)
 
   resetCode  String?
   resetexpire DateTime?
@@ -34,8 +34,11 @@ model User {
 
   ordersCounter Int @default(0)
   rateAvg  Int @default(0)
+  rateCounter Int @default(0)
   totalRevenue Int @default(0)
   lastOrder  DateTime?
+
+  type       String  @default("Regular customer")
   
 
 
@@ -62,6 +65,10 @@ model Orders {
   comment String?
   cost  Int?
   PrintingDetails   PrintingDetails[] 
+
+  employeeId  String?
+  Employee Employee? @relation(fields:[employeeId] , references:[id])
+  employeeNotes String?
   
 
 
@@ -158,4 +165,6 @@ model Employee {
    password   String
    title      String
    isDeleted  Boolean @default(false)
+   
+   Orders Orders[]
 }

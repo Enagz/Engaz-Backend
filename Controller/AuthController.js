@@ -134,13 +134,13 @@ export const login = async (req, res, next) => {
     const { method, id } = req.body;
     let user;
     if (method == "PHONE") {
-      user = await prisma.user.findUnique({ where: { phone: id , Isactive: true} });
+      user = await prisma.user.findUnique({ where: { phone: id , isDeleted: false} });
       if (!user) {
         return res.status(404).json({ error: "User not found" });
       }
     } else if (method == "EMAIL") {
       const formatedemail = id.toLowerCase();
-      user = await prisma.user.findUnique({ where: { email: formatedemail  , Isactive:true} });
+      user = await prisma.user.findUnique({ where: { email: formatedemail  , isDeleted:false} });
       if (!user) {
         return res.status(404).json({ error: "User not found" });
       }

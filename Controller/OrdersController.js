@@ -32,7 +32,9 @@ export const newTranslationOrder = async (req, res, next) => {
         message: "All inputs are required",
       });
     }
-    translationLanguges = JSON.parse(translationLanguges);
+    if (typeof translationLanguges === "string") {
+      translationLanguges = JSON.parse(translationLanguges);
+    }
 
     if (methodOfDelivery !== "Home" && methodOfDelivery !== "Office") {
       return res.status(400).json({
@@ -83,7 +85,7 @@ export const newTranslationOrder = async (req, res, next) => {
       },
     });
 
-    const user = await prisma.user.update({where: { id: userId } , data : {ordersCounter: {increment : 1}}});
+    const user = await prisma.user.update({where: { id: userId } , data : {ordersCounter: {increment : 1} , lastOrder: new Date()}});
 
     
 
@@ -286,14 +288,46 @@ export const rateOrder = async (req, res, next) => {
         message: "Stars must be between 1 and 5",
       });
     }
+    const order = await prisma.orders.findUnique({
+      where: { number: orderId, userid: userId },
+    });
+    if (!order) {
+      return res.status(404).json({
+        message: "Order not found",
+      });
+    }
+    if (order.rate) {
+      return res.status(400).json({
+        message: "Order is already rated",
+      });
+    }
 
     await prisma.orders.update({
       where: { number: orderId, userid: userId },
       data: { rate: stars, comment: comment },
     });
+   
+
+    const user = await prisma.user.findUnique({where: { id: userId },select:{rateAvg: true, rateCounter: true}});
+    const rateAVG = user.rateAvg ;
+    const rateCounter = user.rateCounter ;
+    if( rateCounter == 0 ){
+      await prisma.user.update({
+        where: { id: userId },
+        data: { rateAvg: stars , rateCounter: 1},
+      });
+    }else{
+      const newRate = ( rateAVG * rateCounter + stars ) / ( rateCounter + 1 );
+      await prisma.user.update({
+        where: { id: userId },
+        data: { rateAvg: newRate , rateCounter: {increment : 1}},
+      });
+    }
+
     res.status(200).json({
       message: "Order is rated successfully",
     });
+
   } catch (error) {
     console.log(error);
     next(error);
