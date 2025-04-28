@@ -16,21 +16,21 @@ export const login = async (req , res , next) => {
         }
 
         const formatedemail = email.toLowerCase();
-        const user = await prisma.employee.findUnique({
+        const employee = await prisma.employee.findUnique({
             where : {email : formatedemail}
         })
-        if(!user) {
+        if(!employee) {
             return res.status(401).json({error : "Invalid email or password"})
         }
-        const isMatch = await bcrypt.compare(password , user.password)
+        const isMatch = await bcrypt.compare(password , employee.password)
         if(!isMatch) {
             return res.status(401).json({error : "Invalid email or password"})
         }
         const JWTPayload = {
-            userId : user.id ,
-            username : user.name ,
-            email : user.email ,
-            title : user.title ,
+            employeeId : employee.id ,
+            employeename : employee.name ,
+            employeeemail : employee.email ,
+            title : employee.title ,
         }
         const JWTsecretKey = process.env.JWT_SECRET_DASHBOARD;
         const token = jwt.sign(JWTPayload , JWTsecretKey);

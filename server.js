@@ -11,6 +11,7 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import http from "http";
 import { initializeSocket } from "./socket/socket.js";
+import schedule from "node-schedule";
 
 const PORT = process.env.PORT || 3000;
 
@@ -39,42 +40,42 @@ import UserRouter from "./Routes/UserRouter.js";
 import ConditionsRouter from "./dashboard/Routes/termsRouter.js";
 import DashboardAuthRouter from "./dashboard/Routes/AuthRouter.js";
 import clinetsRouter from "./dashboard/Routes/clientsRouter.js";
+import HomeRouter from "./dashboard/Routes/mainMenuRouter.js"
 
-// const config = {
-//   authRequired: false,
-//   auth0Logout: true,
-//   secret: process.env.AUTH0_SECRET,
-//   baseURL: 'https://wckb4f4m-3000.euw.devtunnels.ms',
-//   clientID: '89zF9QTJkd5PsNU25Es4sWaXb7NwNd2Q',
-//   issuerBaseURL: 'https://dev-0au4j672epupwqrf.us.auth0.com' ,
-//   routes: {
-//     login: '/api/login',
-//     callback: '/api/callback',
-//     logout: '/api/logout'
-//   }
-// };
 
-// (async () => {
-//   await prisma.languge.createMany({
-//     data: [
-//       { name: "English", Arabicname: "الإنجليزية", cost: 100 },
-//       { name: "Arabic", Arabicname: "العربية", cost: 100 },
-//       { name: "German", Arabicname: "الألمانية", cost: 100 },
-//       { name: "French", Arabicname: "الفرنسية", cost: 100 },
-//       { name: "Spanish", Arabicname: "الإسبانية", cost: 100 },
-//       { name: "Italian", Arabicname: "الإيطالية", cost: 100 },
-//       { name: "Portuguese", Arabicname: "البرتغالية", cost: 100 },
-//       { name: "Dutch", Arabicname: "الهولندية", cost: 100 },
-//       { name: "Russian", Arabicname: "الروسية", cost: 100 },
-//       { name: "Chinese", Arabicname: "الصينية", cost: 100 },
-//       { name: "Japanese", Arabicname: "اليابانية", cost: 100 },
-//     ]
-//   });
-// })() ;
 
-(async () => {})();
+(async () => {
 
-// app.use(auth(config));
+  // Schedule a job to run at the end of each month
+  schedule.scheduleJob("59 23 28-31 * *", async () => {
+    const now = new Date();
+    const lastDayOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+
+    if (now.getDate() === lastDayOfMonth || 1) {
+      try {
+        const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+        const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+        const orders = await prisma.orders.findMany({
+          where: {
+            createdAt: {
+              gte: startOfMonth,
+              lte: endOfMonth,
+            },
+          },
+          select:{paid:true}
+        });
+        let margin = 0 ;
+        margin = orders.reduce((acc, order) => acc + order.paid, 0);
+        const monthName = now.toLocaleString('default', { month: 'long' });
+        await prisma.margin.create({ data: { month: monthName, revenue: margin } });
+      } catch (error) {
+        console.error("Error executing end of month task:", error);
+      }
+    }
+  });
+})();
+
+
 app.use("/api", AuthRouter);
 app.use("/api", OrdersRouter);
 app.use("/api", AddressRouter);
@@ -83,6 +84,7 @@ app.use("/api", UserRouter);
 app.use("/api/dashboard", ConditionsRouter);
 app.use("/api/dashboard", DashboardAuthRouter);
 app.use("/api/dashboard", clinetsRouter);
+app.use("/api/dashboard" , HomeRouter) ;
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "OK", timestamp: new Date().toISOString() });

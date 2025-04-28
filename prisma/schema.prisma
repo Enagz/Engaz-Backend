@@ -64,13 +64,15 @@ model Orders {
   rate Int?
   comment String?
   cost  Int?
+  paid  Int?
+  numberofletters Int?
   PrintingDetails   PrintingDetails[] 
 
   employeeId  String?
   Employee Employee? @relation(fields:[employeeId] , references:[id])
   employeeNotes String?
   
-
+ isDeleted Boolean  @default(false)
 
   receiveDate   DateTime?
   operationDate DateTime?
@@ -167,4 +169,16 @@ model Employee {
    isDeleted  Boolean @default(false)
    
    Orders Orders[]
+}
+
+model Balance {
+  id         String     @id @default(uuid())
+  withdrawn  Int        @default(0)
+}
+
+model Margin {
+  id         String     @id @default(uuid())
+  month      String 
+  revenue     Int 
+  createdAt  DateTime   @default(now())
 }
